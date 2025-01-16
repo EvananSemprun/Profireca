@@ -1,8 +1,8 @@
 import { Carousel, Embla } from '@mantine/carousel';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Card, Image, ActionIcon, Title } from '@mantine/core';
 import { useCallback, useEffect, useState } from 'react';
 import { IconChevronLeft, IconChevronRight } from '@tabler/icons-react';
-import { Card, Image, ActionIcon, Title } from '@mantine/core';
 
 function Productsmain() {
     const [scrollProgress, setScrollProgress] = useState(0);
@@ -78,10 +78,10 @@ function Productsmain() {
                 ))}
             </Carousel>
 
-            {/* Display scroll progress */}
             <div style={{
                 position: 'absolute',
                 bottom: '10px',
+                display:'none',
                 left: '50%',
                 transform: 'translateX(-50%)',
                 zIndex: 2,
