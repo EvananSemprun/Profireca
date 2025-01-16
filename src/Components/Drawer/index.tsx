@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useMediaQuery } from '@mantine/hooks';
 import { Drawer as MantineDrawer, Burger, Text, Container } from '@mantine/core';
@@ -28,9 +29,11 @@ function Drawer() {
             >
         <Container mt={15} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center',  }}>
             <div>
-                <Text mt={15} fw={700}>
-                    Texto
-                </Text>
+                 <Link to="/Profireca/Catalogo" style={{ textDecoration: 'none', outline: 'none' }}>
+                                                                    <Text c='black' mr={15} fw={700}>
+                                                                        Texto
+                                                                    </Text>
+                                                                </Link>
                 <Text mt={15} fw={700}>
                     Texto
                 </Text>

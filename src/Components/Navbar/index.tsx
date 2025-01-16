@@ -1,8 +1,9 @@
 import Drawer from '../Drawer';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useMediaQuery } from '@mantine/hooks';
-import { IconSearch, IconBrandInstagram, IconShoppingCart, IconBrandWhatsapp, IconBrandFacebook } from '@tabler/icons-react';
 import { Card, Text, Group, TextInput, HoverCard, Divider, ActionIcon, Title, Grid } from '@mantine/core';
+import { IconSearch, IconBrandInstagram, IconShoppingCart, IconBrandWhatsapp, IconBrandFacebook } from '@tabler/icons-react';
 
 function Navbar() {
     const isMobile = useMediaQuery('(min-width: 1000px)');
@@ -12,7 +13,8 @@ function Navbar() {
             <div
                 style={{
                     width: '100%'
-                }}>
+                }}
+            >
 
                 <Drawer />
                 <Group position={isMobile ? "apart" : "center"} style={{ flexDirection: isMobile ? "row" : "column", width: "100%" }}>
@@ -70,17 +72,14 @@ function Navbar() {
                                             exit={{ opacity: 0, y: 20 }}
                                             transition={{ duration: 0.3 }}
                                         >
-                                            <Grid grow>
-                                                {Array.from({ length: 10 }).map((_, index) => (
-                                                    <Grid.Col key={index} xs={12} sm={6} md={4} lg={3} xl={2}>
-                                                        <Card shadow="sm" radius="md" withBorder>
-                                                            <Card.Section>
-                                                                <h4>Card</h4>
-                                                            </Card.Section>
-                                                        </Card>
-                                                    </Grid.Col>
-                                                ))}
-                                            </Grid>
+
+                                            <Card radius="md">
+                                                <Link to="/Profireca/Catalogo" style={{ textDecoration: 'none', outline: 'none' }}>
+                                                    <Text c='black' mr={15} fw={700}>
+                                                        Texto
+                                                    </Text>
+                                                </Link>
+                                            </Card>
                                         </motion.div>
                                     </HoverCard.Dropdown>
                                 </HoverCard>
