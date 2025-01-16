@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useMediaQuery } from '@mantine/hooks';
-import { Drawer as MantineDrawer, Burger, Text, Center, Container } from '@mantine/core';
+import { Drawer as MantineDrawer, Burger, Text, Container } from '@mantine/core';
 
 function Drawer() {
     const [opened, setOpened] = useState(false);

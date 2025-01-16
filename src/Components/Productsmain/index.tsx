@@ -70,7 +70,7 @@ function Productsmain() {
                                 radius="md"
                                 width="100%"
                                 height="100%"
-                                style={{ objectFit: 'contain', maxHeight: '450px' }}
+                                style={{ objectFit: 'contain', maxHeight: '850px' }}
                             />
                             <Title ta="center" order={4}>{card.title}</Title>
                         </Card>
