@@ -114,7 +114,7 @@ function Productsmain() {
                                 size="xl"
                                 radius="xl"
                             >
-                                <IconChevronLeft color='#3486eb' size={24} />
+                                <IconChevronLeft color='red' size={24} />
                             </ActionIcon>
                         </motion.div>
 
@@ -138,7 +138,7 @@ function Productsmain() {
                                 mr={15}
                                 radius="xl"
                             >
-                                <IconChevronRight color='#3486eb' size={24} />
+                                <IconChevronRight color='red' size={24} />
                             </ActionIcon>
                         </motion.div>
                     </>
