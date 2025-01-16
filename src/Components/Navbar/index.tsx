@@ -1,13 +1,11 @@
+import Drawer from '../Drawer';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
 import { useMediaQuery } from '@mantine/hooks';
 import { IconSearch, IconBrandInstagram, IconShoppingCart, IconBrandWhatsapp, IconBrandFacebook } from '@tabler/icons-react';
-import { Card, Text, Group, TextInput, HoverCard, Divider, ActionIcon, useMantineTheme, Title, Burger, Drawer, Grid } from '@mantine/core';
+import { Card, Text, Group, TextInput, HoverCard, Divider, ActionIcon, Title, Grid } from '@mantine/core';
 
 function Navbar() {
-    const theme = useMantineTheme();
     const isMobile = useMediaQuery('(min-width: 1000px)');
-    const [opened, setOpened] = useState(false);
 
     return (
         <>
@@ -16,29 +14,7 @@ function Navbar() {
                     width: '100%'
                 }}>
 
-                {!isMobile && (
-                    <Burger
-                        opened={opened}
-                        onClick={() => setOpened((o) => !o)}
-                        title={opened ? 'Close navigation' : 'Open navigation'}
-                    />
-                )}
-
-                <Drawer
-                    opened={opened}
-                    onClose={() => setOpened(false)}
-                    title="Navigation"
-                    padding="xl"
-                    size="lg"
-                    position="left"
-                    overlayColor={theme.colorScheme === 'dark' ? theme.colors.dark[9] : theme.colors.gray[2]}
-                    overlayOpacity={0.55}
-                    overlayBlur={3}
-                >
-                    <div>
-                        <p>Content of the Drawer</p>
-                    </div>
-                </Drawer>
+                <Drawer />
                 <Group position={isMobile ? "apart" : "center"} style={{ flexDirection: isMobile ? "row" : "column", width: "100%" }}>
                     <Title ml={15} order={1} align={isMobile ? "left" : "center"}>Logo</Title>
 
@@ -58,7 +34,10 @@ function Navbar() {
 
                     </Group>
                 </Group>
-                <Divider my="sm" mx='sm' />
+                {isMobile && (
+
+                    <Divider my="sm" mx='sm' />
+                )}
                 <Group position={isMobile ? 'apart' : 'center'} style={{ flexDirection: isMobile ? 'row' : 'column', width: '100%' }}>
 
 

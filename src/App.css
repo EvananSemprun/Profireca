@@ -1,6 +1,6 @@
 @media (min-width: 1200px) {
   .carousel-image {
-    max-height: 500px; 
+    max-height: 500px;
   }
 }
 
@@ -16,3 +16,31 @@
   }
 }
 
+.tab-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.tab {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-bottom: 2px solid transparent;
+  transition: background-color 0.3s #ccc;
+}
+
+.tab:hover {
+  color: red;
+  background-color: #f0f0f0;
+}
+
+.active-tab {
+  color: red;
+  border-bottom: 2px solid red;
+  position: relative;
+  top: 2px;
+}
