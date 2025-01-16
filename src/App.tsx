@@ -1,23 +1,18 @@
 import './App.css';
 import Navbar from './Components/Navbar';
-import ImportarnP from './Components/ImportarnP';
-import AboutBanner from './Components/AboutBanner';
-import TabsProductM from './Components/TabsProductM';
-import BannerCarrousel from './Components/BannerCarrousel';
+import Home from './Home';
 import Footer from './Components/Footer/Index';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 function App() {
-
   return (
-    <>
-
+    <Router>
       <Navbar />
-      <BannerCarrousel />
-      <TabsProductM />
-      <AboutBanner/>
-      <ImportarnP/>
-      <Footer/>
-      
-    </>
+      <Routes>
+        <Route path="/Profireca" element={<Home/>} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 
