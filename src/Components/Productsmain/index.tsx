@@ -45,7 +45,8 @@ function Productsmain() {
                 dragFree
                 slideSize="20%"
                 slideGap={5}
-                mt={15}
+                mt={45}
+                mb={45}
                 mr="2%"
                 ml="2%"
                 height="auto"

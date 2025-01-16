@@ -39,7 +39,7 @@ function ImportarnP() {
 
     return (
         <>
-            <Title mr={15} order={1}>Productos Destecados</Title>
+            <Title mr={15} order={1}>Productos Destacados</Title>
             <Divider my="sm" mx='sm' />
 
 
@@ -50,9 +50,11 @@ function ImportarnP() {
             >
                 <Carousel
                     dragFree
+                    
+                mt={45}
+                mb={45}
                     slideSize="20%"
                     slideGap={5}
-                    mt={15}
                     mr="2%"
                     ml="2%"
                     height="auto"

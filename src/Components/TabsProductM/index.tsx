@@ -21,6 +21,7 @@ function TabsProductM() {
                             onClick={() => handleTabClick(index)}
                         >
                             <Text
+                                mt={45}
                                 mr={15}
                                 fw={700}
                             >
